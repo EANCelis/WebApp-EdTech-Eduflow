@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "EDUFLOW - Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/styles/StyTutor.css")
+}
+<body>
+
+<div class=" custom-container d-flex justify-content-center align-items-center min-vh-100">
+
+<div class="justify-content-center form-container ">
+    <form class="form" action="@Url.Action("Registro", "Register")" method="post">
+        <h2>Registro</h2>
+        <fieldset>
+        
+
+            <div class="form-group">
+                <label for="select">Tipo De Usuario</label>
+                <select name="typeofuser" id="select" class="btn btn-secondary dropdown-toggle">
+                    @foreach (var rol in ViewBag.Roles)
+                    {
+                        if(rol.Id_Rol != 1 && rol.Id_Rol != 4)
+                        {
+                        <option class="dropdown-item" value="@rol.Id_Rol">@rol.Descripcion</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Apellido">Apellido</label>
+                <input class="form-control" id="Apellido" type="text" name="txtApellido" required>
+            </div>
+            <div class="form-group">
+                <label for="Nombre">Nombre</label>
+                <input class="form-control" id="Nombre" type="text" name="txtNombre" required>
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <input class="form-control" id="celular" type="text" name="txtTel" required pattern="\d+" title="Solo números">
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input class="form-control" id="dni" type="text" name="txtDni" required pattern="\d+" title="Solo números">
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input class="form-control" id="fechaNacimiento" type="date" name="txtNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input class="form-control" id="email" type="email" name="txtMail" required pattern="[a-zA-Z0-9._%+-]+&#64;a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Correo electrónico válido">
+            </div>
+            <div class="form-group">
+                <label for="password1">Contraseña</label>
+                <input class="form-control" id="password1" type="password" name="txtPass1" required>
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirma Contraseña</label>
+                <input class="form-control" id="password2" type="password" name="txtPass2" required>
+            </div>
+        </fieldset>
+
+        <div class="form__button">
+            <button class="btn btn-success" type="submit">Registrar</button>
+            <button class="btn btn-danger" type="button" onclick="window.history.back()">Volver</button>
+        </div>
+    </form>
+
+</div>
+
+</div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success mt-3">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger mt-3">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+</body>

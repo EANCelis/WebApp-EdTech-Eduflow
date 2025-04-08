@@ -1,0 +1,52 @@
+﻿body {
+    background-color: #00584F;
+    
+}
+
+.form-container {
+    background-color: #F2EFEB;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 11px;
+    
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+/* Asegura que los inputs ocupen el 100% del ancho disponible */
+.form-control {
+    width: 100%;
+}
+
+
+
+.alert {
+    margin-top: 20px;
+}
+
