@@ -18,10 +18,10 @@
 ## 🖼️ Capturas de Pantalla
 
 ### 📌 Panel de Administración
-![Panel de Administración](https://github.com/user-attachments/assets/c8ca07b0-1865-45eb-9710-eba809cfa03e)
+![Panel de Administración](https://github.com/user-attachments/assets/3d5515d1-8a5b-4caf-af4d-3a1b90a24fcf)
 
 ### 📌 Panel de Profesor
-![Vista de Curso](https://github.com/user-attachments/assets/6258d7e3-49b7-4a1d-b539-18e24bc9fe51)
+![Vista de Curso](https://github.com/user-attachments/assets/d5b9a9d7-2b0e-48bd-8182-9e7ecd6b873d)
 
 ## 🛠️ Tecnologías Utilizadas
 
